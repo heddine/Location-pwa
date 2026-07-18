@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion Location - PWA</title>
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Manifest PWA -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Icône -->
+    <link rel="icon" type="image/png" href="icons/icon-192.png">
+
+    <!-- Couleur barre Android -->
+    <meta name="theme-color" content="#2563eb">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- HEADER -->
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+        <h1 class="text-xl font-semibold">Gestion de Location</h1>
+        <p class="text-sm opacity-90">Bail • État des lieux • Quittances</p>
+    </header>
+
+    <!-- MENU PRINCIPAL -->
+    <main class="p-4">
+
+        <div class="grid grid-cols-1 gap-4">
+
+            <a href="bail.html" class="block bg-white p-4 rounded-lg shadow hover:bg-blue-50">
+                <h2 class="text-lg font-semibold">Créer un Bail</h2>
+                <p class="text-sm text-gray-600">Locataire, logement, loyer, clauses…</p>
+            </a>
+
+            <a href="edl.html" class="block bg-white p-4 rounded-lg shadow hover:bg-blue-50">
+                <h2 class="text-lg font-semibold">État des Lieux</h2>
+                <p class="text-sm text-gray-600">Pièces, photos, signatures…</p>
+            </a>
+
+            <a href="quittance.html" class="block bg-white p-4 rounded-lg shadow hover:bg-blue-50">
+                <h2 class="text-lg font-semibold">Quittance de Loyer</h2>
+                <p class="text-sm text-gray-600">Paiement, PDF, envoi…</p>
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- INSTALLATION PWA -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(() => console.log("Service Worker enregistré"))
+                .catch(err => console.log("Erreur SW", err));
+        }
+    </script>
+
+</body>
+</html>
