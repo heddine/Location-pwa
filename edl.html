@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>État des Lieux</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-4">
+
+<h1 class="text-xl font-bold mb-4">État des Lieux</h1>
+
+<form id="formEDL" class="space-y-4">
+
+    <input class="w-full p-2 border rounded" name="piece" placeholder="Nom de la pièce">
+
+    <label class="block">Photo :</label>
+    <input type="file" accept="image/*" capture="camera" id="photo">
+
+    <canvas id="signature" class="border w-full h-40 bg-white"></canvas>
+
+    <button class="bg-blue-600 text-white px-4 py-2 rounded">Enregistrer</button>
+</form>
+
+<script src="./js/edl.js"></script>
+
+</body>
+</html>
