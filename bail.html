@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bail de Location</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-4">
+
+<h1 class="text-xl font-bold mb-4">Créer un Bail</h1>
+
+<form id="formBail" class="space-y-4">
+
+    <input class="w-full p-2 border rounded" name="locataire" placeholder="Nom du locataire">
+    <input class="w-full p-2 border rounded" name="logement" placeholder="Adresse du logement">
+    <input class="w-full p-2 border rounded" name="loyer" placeholder="Loyer mensuel (€)" type="number">
+    <input class="w-full p-2 border rounded" name="charges" placeholder="Charges (€)" type="number">
+
+    <button class="bg-blue-600 text-white px-4 py-2 rounded">Enregistrer</button>
+</form>
+
+<script src="./js/bail.js"></script>
+
+</body>
+</html>
